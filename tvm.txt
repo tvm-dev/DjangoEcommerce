@@ -1,3 +1,16 @@
 notes for tvm
 1) module 2 complete at 09/07/2021;
 2) 
+
+
+
+
+---
+Infos django 3
+1) Django 2.0 removes the django.core.urlresolvers module, 
+which was moved to django.urls in version 1.10. 
+You should change any import to use django.urls instead, like this:
+
+change this: from django.core.urlresolvers import reverse_lazy
+
+to this: from django.urls import reverse
