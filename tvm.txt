@@ -1,6 +1,6 @@
 notes for tvm
 1) module 2 complete at 09/07/2021;
-2) 
+2) tests logins: teste1 - test@test.com  test123@@1
 
 
 
