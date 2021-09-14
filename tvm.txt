@@ -14,3 +14,8 @@ You should change any import to use django.urls instead, like this:
 change this: from django.core.urlresolvers import reverse_lazy
 
 to this: from django.urls import reverse
+
+
+2) on_delete=models.CASCADE
+
+3) 

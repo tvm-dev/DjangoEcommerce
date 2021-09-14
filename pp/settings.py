@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'core', 
     'catalog',
     'accounts',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -146,6 +147,23 @@ AUTHENTICATION_BACKENDS = (
    'accounts.backends.ModelBackend',
 
 )
+
+#messagens.tvm
+from django.contrib.messages import constants as messages_constants
+MESSAGE_TAGS = {
+    messages_constants.DEBUG: 'debug',
+    messages_constants.INFO: 'info',
+    messages_constants.SUCCESS: 'success',
+    messages_constants.WARNING: 'warning',
+    messages_constants.ERROR:  'danger',
+    
+
+
+
+}
+
+
+
 
 try:
     from .local_settings import *
