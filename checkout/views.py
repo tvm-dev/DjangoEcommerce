@@ -1,9 +1,14 @@
+# coding=utf-8
+
 from django.shortcuts import get_object_or_404
 from django.views.generic import RedirectView, TemplateView
 from django.forms import modelformset_factory
 from django.contrib import messages
+#from django.core.urlresolvers import reverse
 from django.urls import reverse
+
 from catalog.models import Product
+
 from .models import CartItem
 
 
