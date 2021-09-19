@@ -5,7 +5,7 @@ notes for tvm
 
 
 
----
+#######################
 Infos django 3
 1) Django 2.0 removes the django.core.urlresolvers module, 
 which was moved to django.urls in version 1.10. 
@@ -13,9 +13,13 @@ You should change any import to use django.urls instead, like this:
 
 change this: from django.core.urlresolvers import reverse_lazy
 
-to this: from django.urls import reverse
+to this:
 
+from django.urls import reverse
 
-2) on_delete=models.CASCADE
+2) on_delete=models.CASCADE on foreignKey, always
 
-3) 
+### Problems and how to solve: ###
+
+1) NameError: name 'Order' is not defined: in this erros, o modulo wasn't  import yet!
+2) Reverse for 'order_list' not found. 'order_list' is not a valid view function or pattern name:
