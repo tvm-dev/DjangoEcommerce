@@ -10,8 +10,8 @@ urlpatterns = [
     path('carrinho/', views.cart_item, name='cart_item'),
     path('finalizando/', views.checkout, name='checkout'),
     path('meus-pedidos/', views.order_list, name='order_list'),
+    path('meus-pedidos/<pk>', views.order_detail, name='order_detail'),
    
 ]
 
 
-#path('articles/<int:year>/<int:month>/<slug:slug>/', views.article_detail),

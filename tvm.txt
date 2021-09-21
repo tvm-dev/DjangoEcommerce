@@ -19,7 +19,9 @@ from django.urls import reverse
 
 2) on_delete=models.CASCADE on foreignKey, always
 
-### Problems and how to solve: ###
+### Erros, Problems and how to solve: ###
 
-1) NameError: name 'Order' is not defined: in this erros, o modulo wasn't  import yet!
-2) Reverse for 'order_list' not found. 'order_list' is not a valid view function or pattern name:
+1) NameError: name 'Order' is not defined: in this erros, o module wasn't  import yet!
+2) Reverse for 'order_list' not found. 'order_list' is not a valid view function or pattern name: the django was not find the url accounts:index because the correct url was checkout:order_list in file index of folder accounts! bori rs!
+3) IndentationError: unindent does not match any outer indentation level: only fix indentation
+4) 
