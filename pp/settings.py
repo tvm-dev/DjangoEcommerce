@@ -219,4 +219,4 @@ except ImportError:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-djagno_heroku.settings(locals())
+#djagno_heroku.settings(locals())
