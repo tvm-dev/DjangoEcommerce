@@ -141,6 +141,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+djagno_heroku.settings(locals())
+
 
 #E-mail tvm
 EMAIL_HOST = ''
