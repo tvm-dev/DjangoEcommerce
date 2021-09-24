@@ -1,10 +1,33 @@
 {% extends "base.html" %}
 
 {% block container %}
-<div class="jumbotron page-header">
-    <h1>Django E-Commerce tvm</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p><a class="btn btn-primary">Saiba mais</a></p>
-  </div>
+ 
+ 
+
+ 
+
+ 
+ <!--comentario em html-->
+
+<div class="jumbotron text-center">
+  <h1 class="display-4">Mergulhe no Mundo da Tecnologia!</h1>
+  <p class="lead">Você vai estudar, praticar, discutir e se aprofundar em uma plataforma que respira tecnologia.</p>
+  <hr class="my-4">
+  
+  <p><a href="{% url 'catalog:product_list' %}" class="btn btn-primary btn-lg">Conheça nossos Treinamentos</a></p>
+
+</div>
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading text-center" >ESTUDE, ATUALIZE-SE E ENTRE NO MERCADO DE TRABALHO RAPIDAMENTE:</h4>
+  <p text-justify>O mercado de trabalho é vivo, está em constante mudança. Um curso que estava em alta dez anos atrás pode não ser mais tão interessante. Por outro lado, uma formação que há alguns anos nem era oferecida nas faculdades pode estar bombando!
+
+Independentemente dessas variações, muitas profissões têm se mantido no topo nos últimos anos, com tendência a permanecer em alta por mais algum tempo e nós temos os cursos mais pedidos pelas empreasas e pelo mercado de trabalho, vem estudar com a gente vem!
+
+
+.</p>
+  <hr>
+  
+</div>
 
 {% endblock %}
