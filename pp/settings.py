@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 import django_on_heroku
-#import django_heroku
+
 
 
 
@@ -128,6 +128,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 #E-mail tvm
 EMAIL_HOST = ''
