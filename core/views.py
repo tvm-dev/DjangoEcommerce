@@ -1,15 +1,44 @@
 #coding=utf-8
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.conf import settings
+from .forms import ContactForm
+from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import View, TemplateView, CreateView
+from django.contrib.auth import get_user_model
+from .forms import ContactForm
+from django.contrib import messages
 
-def index(request):
-    return render(request, 'index.html')
+
+from core import views
+
+User = get_user_model()
+
+class IndexView(TemplateView):
+
+    template_name = 'index.html'
+
+index = IndexView.as_view()
+
+# def index(request):
+#     return render(request, 'index.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    success = False
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+       form.send_mail()   
+       sucess = True
+    elif request.method == 'POST':
+      messages.error(request, 'Formulário Inválido!')
+    context = {
+      'form': form,
+      'success': success
+  }
+    return render(request, 'contact.html', context)
 
-def product_list(request):
-    return render(request, 'product_list.html')
 
-def product(request):
-    return render(request, 'product.html') 
+def privacy(request):
+  return render(request, 'privacy.html')
+

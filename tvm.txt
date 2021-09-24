@@ -1,0 +1,28 @@
+notes for tvm
+1) module 2 complete at 09/07/2021;
+2) tests logins: teste1 - test@test.com  test123@@1
+
+
+
+
+#######################
+Infos django 3
+1) Django 2.0 removes the django.core.urlresolvers module, 
+which was moved to django.urls in version 1.10. 
+You should change any import to use django.urls instead, like this:
+
+change this: from django.core.urlresolvers import reverse_lazy
+
+to this:
+
+from django.urls import reverse
+
+2) on_delete=models.CASCADE on foreignKey, always
+
+### Erros, Problems and how to solve: ###
+
+1) NameError: name 'Order' is not defined: in this erros, o module wasn't  import yet!
+2) Reverse for 'order_list' not found. 'order_list' is not a valid view function or pattern name: the django was not find the url accounts:index because the correct url was checkout:order_list in file index of folder accounts! bori rs!
+3) IndentationError: unindent does not match any outer indentation level: only fix indentation
+4) TypeError: object of type 'NoneType' has no len(): You need to ensure get_queryset **always** returns a value:
+5) 
