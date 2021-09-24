@@ -1,2 +1,1 @@
-web: gunicorn ecommerce_heroku.wsgi --log-file -
-#heroku ps:scale worker=1
+web gunicorn ecommerce_heroku.wsgi --log-file -
