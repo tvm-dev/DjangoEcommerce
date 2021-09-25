@@ -131,6 +131,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
+<<<<<<< HEAD
 STATIC_ROOT = "/core/assets/"
 
 ALLOWED_HOSTS = ['*']
@@ -143,6 +144,13 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/core/assets/',
 ]
+=======
+ALLOWED_HOSTS = ['*']
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+>>>>>>> parent of 70bbed1... Settings OK on Heroku
 
 
 
