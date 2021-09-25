@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-qb*baaj2cl_!rlo1()bwb2nd0atnfh(rqncox-yg%ts-g2wo-z
 #SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -128,17 +128,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
-#STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-django_heroku.settings(locals())
+MEDIA_URL = '/media/'
 
+ALLOWED_HOSTS = ['*']
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
