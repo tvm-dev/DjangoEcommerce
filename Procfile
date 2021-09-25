@@ -1,1 +1,1 @@
-web: gunicorn pp_heroku.wsgi --log-file -
+web: gunicorn pp.wsgi
