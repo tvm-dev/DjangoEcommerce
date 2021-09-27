@@ -47,15 +47,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+   # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
     'checkout.middleware.cart_item_middleware',
 ]
 
@@ -146,21 +145,21 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# E-mail
-#EMAIL_HOST = ''
-#EMAIL_HOST_USER = ''
-#EMAIL_HOST_PASSWORD = ''
-#DEFAULT_FROM_EMAIL = 'admin@pp.com'
+#E-mail
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = 'admin@pp.com'
 
 # auth
-#LOGIN_URL = 'login'
-#LOGIN_REDIRECT_URL = 'index'
-#LOGOUT_URL = 'logout'
-#AUTH_USER_MODEL = 'accounts.User'
-#AUTHENTICATION_BACKENDS = (
-#    'django.contrib.auth.backends.ModelBackend',
-#    'accounts.backends.ModelBackend',
-#)
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_URL = 'logout'
+AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.ModelBackend',
+)
 
 # Messages
 from django.contrib.messages import constants as messages_constants
@@ -179,13 +178,16 @@ THUMBNAIL_ALIASES = {
         'product_image': {'size': (285, 160), 'crop': True},
     },
 }
-# Thumbnails
-THUMBNAIL_ALIASES = {
-    '': {
-        'product_image': {'size': (285, 160), 'crop': True},
-    },
+#THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
+
+# cache
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'cache',
+    }
 }
-THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
+
 
 # Logging
 LOGGING = {
