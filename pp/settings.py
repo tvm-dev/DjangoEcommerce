@@ -171,15 +171,13 @@ THUMBNAIL_ALIASES = {
         'product_image': {'size': (285, 160), 'crop': True},
     },
 }
-THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
-
-# cache
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'cache',
-    }
+# Thumbnails
+THUMBNAIL_ALIASES = {
+    '': {
+        'product_image': {'size': (285, 160), 'crop': True},
+    },
 }
+THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
 
 # Logging
 LOGGING = {
